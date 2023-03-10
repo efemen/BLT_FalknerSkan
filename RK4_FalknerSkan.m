@@ -1,4 +1,4 @@
-%% RK4 numerical solver modified for solving Blasius Similarity Equation.
+%% RK4 numerical solver modified for solving Falkner-Skan equation.
 
 function [f_next, g_next, h_next] = RK4_FalknerSkan(dh, d_eta, f, g, h, i)
 
@@ -21,6 +21,7 @@ function [f_next, g_next, h_next] = RK4_FalknerSkan(dh, d_eta, f, g, h, i)
     g(i + 1) = g(i) + (dg1 + 2*dg2 + 2*dg3 + dg4) / 6;
     f(i + 1) = f(i) + (df1 + 2*df2 + 2*df3 + df4) / 6;
     h(i + 1) = h(i) + (dh1 + 2*dh2 + 2*dh3 + dh4) / 6;
+
 
     f_next = f;
     g_next = g;
