@@ -1,6 +1,6 @@
 %% RK4 numerical solver modified for solving Falkner-Skan equation.
 
-function [f_next, g_next, h_next] = RK4_FalknerSkan(dh, d_eta, f, g, h, i)
+function [f_next, g_next, h_next] = F1_RK4_FalknerSkan(dh, d_eta, f, g, h, i)
 
     dg1 = d_eta * h(i);
     df1 = d_eta * g(i);
